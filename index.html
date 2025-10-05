@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmed Tawheed - تعريف الاحتياجات، الاستراتيجية، المحتوى، النطاق، وخرائط الموقع</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #6a0dad;
+            --secondary-color: #9370db;
+            --light-color: #e6d7ff;
+            --dark-color: #4b0082;
+            --text-color: #333;
+            --light-text: #f8f9fa;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f7ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            box-shadow: 0 4px 12px rgba(106, 13, 173, 0.2);
+        }
+        
+        .navbar-brand {
+            font-weight: 700;
+            font-size: 1.5rem;
+            color: var(--light-text) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+            background-size: 20px 20px;
+            opacity: 0.2;
+            z-index: 0;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 15px;
+        }
+        
+        .section-title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 2px;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(106, 13, 173, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            overflow: hidden;
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(106, 13, 173, 0.2);
+        }
+        
+        .card-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            padding: 15px 20px;
+            border: none;
+        }
+        
+        .card-body {
+            padding: 25px;
+        }
+        
+        .list-group-item {
+            border: none;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(106, 13, 173, 0.1);
+        }
+        
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+        
+        .list-group-item i {
+            color: var(--primary-color);
+            margin-left: 10px;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 30px;
+            padding: 12px 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(106, 13, 173, 0.3);
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            border-radius: 30px;
+            padding: 10px 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+        
+        .section-padding {
+            padding: 80px 0;
+        }
+        
+        .bg-light-section {
+            background-color: #f3ebff;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 15px rgba(106, 13, 173, 0.2);
+        }
+        
+        .quiz-container {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(106, 13, 173, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .quiz-question {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        .quiz-options {
+            margin-bottom: 30px;
+        }
+        
+        .quiz-option {
+            background-color: #f9f7ff;
+            border: 2px solid transparent;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .quiz-option:hover {
+            border-color: var(--secondary-color);
+            background-color: #f3ebff;
+        }
+        
+        .quiz-option.selected {
+            border-color: var(--primary-color);
+            background-color: rgba(106, 13, 173, 0.1);
+        }
+        
+        .quiz-option.correct {
+            border-color: #28a745;
+            background-color: rgba(40, 167, 69, 0.1);
+        }
+        
+        .quiz-option.incorrect {
+            border-color: #dc3545;
+            background-color: rgba(220, 53, 69, 0.1);
+        }
+        
+        .quiz-navigation {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+        
+        .quiz-result {
+            display: none;
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(106, 13, 173, 0.05), rgba(147, 112, 219, 0.1));
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+        
+        .result-score {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+        
+        .footer {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 50px 0 30px;
+        }
+        
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .footer-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 0;
+        }
+        
+        .footer-link:hover {
+            color: white;
+            transform: translateX(5px);
+        }
+        
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            margin-left: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            color: var(--light-color);
+            transform: translateY(-5px);
+        }
+        
+        .next-site-btn {
+            display: inline-block;
+            background: white;
+            color: var(--primary-color);
+            border-radius: 30px;
+            padding: 15px 40px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 20px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .next-site-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+            color: var(--primary-color);
+        }
+        
+        .example-card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(106, 13, 173, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .example-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 25px rgba(106, 13, 173, 0.2);
+        }
+        
+        .example-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 15px 20px;
+            font-weight: 600;
+        }
+        
+        .example-body {
+            padding: 20px;
+        }
+        
+        .difficulty-badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+        
+        .difficulty-easy {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        
+        .difficulty-medium {
+            background-color: #fff3cd;
+            color: #856404;
+        }
+        
+        .difficulty-hard {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        
+        .sitemap-visual {
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 5px 15px rgba(106, 13, 173, 0.1);
+        }
+        
+        .sitemap-node {
+            background-color: var(--light-color);
+            border: 2px solid var(--primary-color);
+            border-radius: 8px;
+            padding: 10px 15px;
+            margin: 10px;
+            display: inline-block;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+        
+        .sitemap-child {
+            margin-right: 30px;
+            position: relative;
+        }
+        
+        .sitemap-child::before {
+            content: "";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            width: 15px;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        .sitemap-child::after {
+            content: "";
+            position: absolute;
+            right: -15px;
+            top: 0;
+            height: 50%;
+            width: 2px;
+            background-color: var(--primary-color);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .section-padding {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i class="fas fa-sitemap ms-2"></i> Ahmed Tawheed
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#intro">مقدمة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#needs">تعريف الاحتياجات</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#strategy">الاستراتيجية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#content">المحتوى</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scope">النطاق</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sitemaps">خرائط الموقع</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#examples">أمثلة</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quiz">اختبار</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="hero-content" data-aos="fade-right">
+                        <h1 class="hero-title">تعريف الاحتياجات، الاستراتيجية، المحتوى، النطاق، وخرائط الموقع</h1>
+                        <p class="hero-subtitle">دليل شامل لتصميم تجارب مستخدم فعالة من خلال فهم الاحتياجات وتحديد الاستراتيجية</p>
+                        <a href="#intro" class="btn btn-light btn-lg">
+                            ابدأ التعلم <i class="fas fa-arrow-left ms-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="text-center" data-aos="fade-left">
+                        <i class="fas fa-project-diagram" style="font-size: 15rem; opacity: 0.7;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section id="intro" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">مقدمة قصيرة</h2>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10" data-aos="fade-up">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>هنا هنتكلم بالتفصيل الممل عن: تعريف الاحتياجات والجمهور، تحضير الاستراتيجية، متطلبات المحتوى والتجزئة (fractionality)، تحديد النطاق، ومبدأ خرائط الموقع (sitemaps) وطرق اختبارها — وبالتحديد Treejack والطريقة العملية لعمل sitemap. في الآخر في أمثلة توضيحية، دور الحاجات دي في مجال UI/UX، وأسئلة اختيار من متعدد مع إجابات، وكمان عناوين رئيسية للبحث أكثر.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Defining Needs & Audiences Section -->
+    <section id="needs" class="section-padding bg-light-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">تعريف الاحتياجات والجمهور</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ايه المقصود؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>تعريف الاحتياجات يعني نفهم ليه بنبني المنتج/الموقع أو الخدمة — إيه المشاكل اللي هيحلها؟ مين اللي هينفعه؟ الجمهور (audience) هو الناس اللي عندهم المشكلة أو اللي ممكن يستخدموا المنتج.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">خطوات عملية بسيطة</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-database"></i>
+                                    اجمع بيانات: مقابلات مستخدمين قصيرة، استبيان، تحليلات الموقع، شكاوى العملاء.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-lightbulb"></i>
+                                    اكتب فرضيات: "المستخدم أ محتاج يبقى قادر يدور على منتجات بسرعة".
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-user"></i>
+                                    اصنع Personas مبسطة: شخصية رمزية تمثل مستخدم نموذجي.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-heart"></i>
+                                    حدد الاحتياجات الوظيفية والعاطفية: وظيفة = "أشتري بسرعة"، عاطفة = "أحس بالأمان وأنا بدفع".
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">أدوات ومخرجات</h5>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>أدوات:</strong></p>
+                            <ul>
+                                <li>Google Forms</li>
+                                <li>Hotjar</li>
+                                <li>Google Analytics</li>
+                                <li>مقابلات صوتية</li>
+                            </ul>
+                            <p><strong>مخرجات:</strong></p>
+                            <ul>
+                                <li>قوائم احتياجات</li>
+                                <li>personas</li>
+                                <li>customer journey map</li>
+                                <li>problem statements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">نصائح عامية</h5>
+                        </div>
+                        <div class="card-body">
+                            <p>ما تبقاش بتفترض إنك عارف الجمهور من غير ما تسأل. لو عملت assumption كتير، لازم تختبرها بسرعة.</p>
+                            <div class="alert alert-info mt-3">
+                                <i class="fas fa-info-circle ms-2"></i>
+                                <strong>تذكر:</strong> التعرف على الجمهور المستهدف هو حجر الأساس لأي تصميم ناجح.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Preparing Strategy Section -->
+    <section id="strategy" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">تحضير الاستراتيجية</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ليه الاستراتيجية مهمة؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>الاستراتيجية بتخلّي الشغل له اتجاه: مش مجرد تصميم، إنما حل لمشكلة بعينها مع مؤشرات نجاح (KPIs).</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">مكونات الاستراتيجية</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-bullseye"></i>
+                                    <strong>الرؤية والهدف:</strong> الهدف التجاري (زي زيادة التسجيلات 20%) وهدف المستخدم (زي تقليل وقت البحث).
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-chart-line"></i>
+                                    <strong>المقاييس (KPIs):</strong> Conversion rate، time on task، task success.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-users"></i>
+                                    <strong>خريطة أصحاب المصلحة:</strong> مين صاحِب القرار؟ مين مقدم البيانات؟
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-calendar-check"></i>
+                                    <strong>خطة اختبار:</strong> امتى هتعمل card sorting؟ امتى A/B tests؟
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">خطوات إعداد استراتيجية سريعة</h4>
+                </div>
+                <div class="card-body">
+                    <ol>
+                        <li>حط هدف واضح واحد أو اثنين.</li>
+                        <li>اعمل قائمة مقاييس تقدر تقيس بيها التغيير.</li>
+                        <li>رتب الأولويات (MoSCoW: Must, Should, Could, Won't).</li>
+                        <li>حدد المخاطر والافتراضات.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content & Fractionality Section -->
+    <section id="content" class="section-padding bg-light-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">متطلبات المحتوى والتجزئة</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ايه هي "fractionality"؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>المقصود هنا تجزئة المحتوى إلى قطع صغيرة قابلة لإعادة الاستخدام (atomic content). يعني بدل صفحة كبيرة، نعمل نصوص صغيرة، عناوين، ملخصات، صور مستقلة، إلخ.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ليه ده مهم؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    يسهل إدارة المحتوى في CMS.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    يسرّع إعادة الاستخدام (مثلاً نفس الملخص يظهر في صفحة المنتج وفي feed).
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-check-circle"></i>
+                                    يساعد على الأداء والـSEO.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">عناصر متطلبات المحتوى</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>أنواع المحتوى:</strong> مقالة، صفحة منتج، تعليمات، FAQ، فيديو.</li>
+                                <li><strong>المتطلبات الوظيفية:</strong> هل المحتوى ديناميكي؟ هل يحتاج صلاحيات؟</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <ul>
+                                <li><strong>البيانات الوصفية:</strong> العناوين، الأوصاف، الكيوردز، الترجمات.</li>
+                                <li><strong>قواعد النشر:</strong> من ينشر؟ من يراجع؟</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mt-4" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">عملية سريعة لعمل Content Model</h4>
+                </div>
+                <div class="card-body">
+                    <ol>
+                        <li>اعمل قائمة بكل أنواع المحتوى.</li>
+                        <li>لكل نوع حدد الحقول (title, body, image, author, date, locale).</li>
+                        <li>حدد العلاقات بين الأنواع.</li>
+                        <li>فكّر في إعادة الاستخدام (components/atoms).</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outlining Scope Section -->
+    <section id="scope" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">توضيح النطاق</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">معنى النطاق</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>النطاق هو كل اللي هنعمله، والـout-of-scope هو اللي مش هنعمله دلوقتي. مهم عشان ما يدخلش شغل زيادة يضيع وقتك وميزانيتك.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">خطوات لتحديد النطاق</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-list"></i>
+                                    <strong>قائمة المتطلبات:</strong> من الأولويات اللي طلعت.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-code-branch"></i>
+                                    <strong>تقسيم العمل إلى إصدارات:</strong> v1 (MVP)، v2، v3.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-lock"></i>
+                                    <strong>تحديد قيود:</strong> تِقنية، زمن، موارد.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-file-signature"></i>
+                                    <strong>موافقة أصحاب المصلحة:</strong> وثّق وامضوا.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">كيف تتعامل مع scope creep؟</h4>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>خلي كل إضافة تمر بعملية تقييم (أثر، قيمة، تكلفة).</li>
+                        <li>استخدم backlog واحد واضع أولويات.</li>
+                    </ul>
+                    <div class="alert alert-warning mt-3">
+                        <i class="fas fa-exclamation-triangle ms-2"></i>
+                        <strong>تنبيه:</strong> توسيع النطاق بدون تخطيط قد يؤدي إلى فشل المشروع أو تأخيره بشكل كبير.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction to Sitemaps Section -->
+    <section id="sitemaps" class="section-padding bg-light-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">مقدمة عن خرائط الموقع</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ايه هي sitemap بالضبط؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li><strong>في سياق UX:</strong> خطة/خريطة بنية المحتوى والصفحات — بتوضح ازاي المحتوى مرتبط والتنقل.</li>
+                                <li><strong>في سياق technical (XML sitemap):</strong> ملف للبحث الآلي (search engines).</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">أنواع visual sitemaps</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <i class="fas fa-minus"></i>
+                                    <strong>بسيطة (Flat)</strong> — مواقع بسيطة.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-sitemap"></i>
+                                    <strong>هرمية</strong> — مواقع فيها أقسام رئيسية وتحتها صفحات كثير.
+                                </li>
+                                <li class="list-group-item">
+                                    <i class="fas fa-project-diagram"></i>
+                                    <strong>معقدة/شبكية</strong> — منصات بFeatures متعددة وربط واسع.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">فوائد خرائط الموقع للـUX</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle"></i>
+                            بتوضح الترتيب الهرمي للمحتوى.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle"></i>
+                            بتسهل تصميم القائمة والتنقل.
+                        </li>
+                        <li class="list-group-item">
+                            <i class="fas fa-check-circle"></i>
+                            بتساعد في اختبار قابلية الاكتشاف والبحث.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sitemap-visual mt-4" data-aos="fade-up">
+                <h5 class="text-center mb-4">مثال على خريطة موقع بسيطة</h5>
+                <div class="text-center">
+                    <div class="sitemap-node">الصفحة الرئيسية</div>
+                    <div class="mt-3">
+                        <div class="sitemap-node d-inline-block">من نحن</div>
+                        <div class="sitemap-node d-inline-block">خدماتنا</div>
+                        <div class="sitemap-node d-inline-block">المدونة</div>
+                        <div class="sitemap-node d-inline-block">اتصل بنا</div>
+                    </div>
+                    <div class="mt-3">
+                        <div class="sitemap-child d-inline-block">خدمة 1</div>
+                        <div class="sitemap-child d-inline-block">خدمة 2</div>
+                        <div class="sitemap-child d-inline-block">خدمة 3</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sitemapping & Treejack Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">Sitemapping | اختبار sitemap باستخدام Treejack | إنشاء sitemap</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">خطوات عملية لإنشاء sitemap</h4>
+                        </div>
+                        <div class="card-body">
+                            <ol>
+                                <li>اجمع المتطلبات والمحتوى: من المحتوى اللي حددته قبل كده.</li>
+                                <li>اعمل ورقة/لوحة أولية: رسم شجرى للعناوين والأقسام.</li>
+                                <li>استعمل card sorting (مفتوح/مغلق) لتحقق من توقعات المستخدمين.</li>
+                                <li>أنشئ sitemap بصري (مثلاً في Miro أو FigJam أو Whimsical).</li>
+                                <li>اختبر الشجرة (tree testing): هنا ييجي دور Treejack.</li>
+                                <li>راجع وصحّح بناءً على نتائج الاختبار.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ازاي Treejack بيشتغل؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>Treejack هو أداة لاختبار الـIA (مطور من Optimal Workshop). بتعرض للمستخدم شجرة (بدون تصميم) وتطلب منه يوصل لصفحة معينة — بتقيس النجاح، المسار، الزمن، والـdirectness.</p>
+                            <p><strong>مقاييس مهمة:</strong></p>
+                            <ul>
+                                <li>success rate (نسبة النجاح)</li>
+                                <li>directness (1 يعني وصلوا في الطريق المباشر)</li>
+                                <li>time on task</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">إعداد اختبار Treejack (خطوات عملية)</h4>
+                </div>
+                <div class="card-body">
+                    <ol>
+                        <li>حدد المهام الواقعية (مثلاً: "فين أقدّم طلب استرجاع؟").</li>
+                        <li>جهّز الشجرة بصيغة بسيطة (عناوين فقط، بدون UI).</li>
+                        <li>اختار جمهور اختبار مناسب (10-50 شخص حسب الحالة).</li>
+                        <li>شغّل الاختبار، اجمع النتائج.</li>
+                        <li>حلّل: إذا success rate أقل من 50% يبقى في مشكلة كبيرة.</li>
+                        <li>عدّل الشجرة ثم أعد الاختبار.</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="card" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">أدوات بديلة وطرق يدوية</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5>Card sorting:</h5>
+                            <ul>
+                                <li>Optimal Workshop</li>
+                                <li>UsabilityHub</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6">
+                            <h5>رسم الخرائط:</h5>
+                            <ul>
+                                <li>Miro</li>
+                                <li>FigJam</li>
+                                <li>Whimsical</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <h5>اختبار الشجرة يدويًا:</h5>
+                        <p>عبر مقابلات أو عبر اختبار قابلية الاستخدام (مع ورق).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Examples Section -->
+    <section id="examples" class="section-padding bg-light-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">خمس أمثلة توضيحية</h2>
+            <p class="text-center mb-5" data-aos="fade-up">مستوى سهل إلى صعب</p>
+            
+            <div class="row g-4">
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h5 class="mb-0">مثال 1 — موقع مدونة شخصية</h5>
+                        </div>
+                        <div class="example-body">
+                            <span class="difficulty-badge difficulty-easy">سهل</span>
+                            <p><strong>المحتوى:</strong> مقالات، عني، تواصل.</p>
+                            <p><strong>نصيحة:</strong> شجرة بسيطة Flat. Fractionality: عنوان، ملخص، محتوى.</p>
+                            <p><strong>اختبار:</strong> مستخدمين 5 بس يكفي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h5 class="mb-0">مثال 2 — موقع مطعم مع قائمة أونلاين</h5>
+                        </div>
+                        <div class="example-body">
+                            <span class="difficulty-badge difficulty-medium">سهل-متوسط</span>
+                            <p><strong>محتوى:</strong> منيو، حجز طاولة، الطلب أونلاين، العروض.</p>
+                            <p><strong>نصيحة:</strong> استخدم taxonomy للقسم (مقبلات، أطباق رئيسية...).</p>
+                            <p><strong>اختبار:</strong> card sorting لمعرفة تصنيف الأطباق.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h5 class="mb-0">مثال 3 — متجر إلكتروني بسيط</h5>
+                        </div>
+                        <div class="example-body">
+                            <span class="difficulty-badge difficulty-medium">متوسط</span>
+                            <p><strong>محتوى:</strong> تصنيفات منتجات، صفحات منتج، سلة.</p>
+                            <p><strong>نصيحة:</strong> fractionality قوي — عناصر المنتج، مواصفات، مراجعات.</p>
+                            <p><strong>اختبار:</strong> Tree testing لمهام العثور على منتج محدد.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h5 class="mb-0">مثال 4 — موقع جامعة</h5>
+                        </div>
+                        <div class="example-body">
+                            <span class="difficulty-badge difficulty-hard">معقد</span>
+                            <p><strong>جمهور متنوع:</strong> طلبة، أساتذة، متقدمين، زوار.</p>
+                            <p><strong>نصيحة:</strong> Personas مهمة؛ لازم شجرة هرمية ومتفرعة.</p>
+                            <p><strong>اختبار:</strong> اختبارات شجرة متعددة لكل persona.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="example-card">
+                        <div class="example-header">
+                            <h5 class="mb-0">مثال 5 — منصة SaaS للمؤسسات</h5>
+                        </div>
+                        <div class="example-body">
+                            <span class="difficulty-badge difficulty-hard">صعب</span>
+                            <p><strong>محتوى:</strong> Dashboard، إعدادات متعددة، إدارة مستخدمين، تقارير.</p>
+                            <p><strong>نصيحة:</strong> اعمل content model أصلاً، قسم الــIA والـfeatures عن بعض.</p>
+                            <p><strong>اختبار:</strong> Tree testing + usability testing على flows الحرجة.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Role in UI/UX Section -->
+    <section class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">دور العناصر دي في مجال UI/UX</h2>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ازاي تعريف الاحتياجات بيفيد UI/UX؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>لما تعرف احتياجات الجمهور، هتعرف إيه اللي يظهر في الشاشة الأولى، إيه المحتوى الحيوي، وإزاي تنظم المعلومات — ده بيأثر على الهيكل العام، الهرمية، والـmicrocopy.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">ازاي الاستراتيجية بتأثر؟</h4>
+                        </div>
+                        <div class="card-body">
+                            <p>الاستراتيجية تحدد أولويات التصميم: أمور زي "خلي التسجيل بسيط" هتأثر في اختيار الforms، أما لو الهدف زيادة المبيعات هتركز على CTAs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mb-5">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">المحتوى والتجزئة وتأثيره على الواجهة</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>محتوى مبني من Atoms => يسهل بناء UI components قابلة لإعادة الاستخدام.</li>
+                                <li>تحسين الأداء: تحميل أجزاء صغيرة بدل صفحة ضخمة.</li>
+                                <li>تجربة متسقة: نفس المكون يظهر في أجزاء مختلفة بنفس الشكل.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="mb-0">النطاق وتأثيره</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul>
+                                <li>يحدد الـfeatures اللي هنصمم لها UI فعلاً.</li>
+                                <li>لما يكون نطاق واضح، المصمم يقدر يركز على flows بدل ما يتشتت.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4" data-aos="fade-up">
+                <div class="card-header">
+                    <h4 class="mb-0">الـSitemaps وتأثيرها</h4>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li>بتحدد شجرة التنقل، القوائم، breadcrumbs، وترتيب العناصر في الـnavigation.</li>
+                        <li>بتأثر على الـwireframes، لأنك تبنى صفحات على أساس مكانها في الشجرة.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h3 class="text-center mb-4" data-aos="fade-up">خمسة أمثلة توضيحية لدورهم في UI/UX</h3>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h5 class="card-title">Persona بتغير priority في الـnav</h5>
+                            <p class="card-text">لو Persona بتهمها الأخبار أولًا، نخلي قسم الأخبار ظاهر في القائمة الرئيسية.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-th-large"></i>
+                            </div>
+                            <h5 class="card-title">Fractionality يساعد في component library</h5>
+                            <p class="card-text">عنوان، ملخص، صورة => reusable card component.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <h5 class="card-title">Strategy يؤثر على CTA placement</h5>
+                            <p class="card-text">لو الهدف تحويل، نحط CTA بارز في الهيدر وفي أول صفحة.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h5 class="card-title">Scope يقرر لو هنصمم mobile-first</h5>
+                            <p class="card-text">لو الجمهور بيستخدم موبايل أغلب الوقت.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <h5 class="card-title">Tree testing يغير اسماء القوائم</h5>
+                            <p class="card-text">لو المستخدمين مش لاقين "الدعم" نغيّرها ل"مساعدة".</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Examples Section -->
+    <section class="section-padding bg-light-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">خمسة أمثلة توضيحية إضافية</h2>
+            <p class="text-center mb-5" data-aos="fade-up">لمواقف UI/UX خاصة</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-layer-group"></i>
+                            </div>
+                            <h5 class="card-title">تسلسل بصري لصفحة قسم</h5>
+                            <p class="card-text">بناءً على الـsitemap، قررنا إن أهم محتوى يبقى فوق الطي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-map-signs"></i>
+                            </div>
+                            <h5 class="card-title">breadcrumbs</h5>
+                            <p class="card-text">تظهر في UI طبقا للهيكل الهرمي للسitemap.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h5 class="card-title">search prominence</h5>
+                            <p class="card-text">لمواقع كبيرة، البحث لازم يظهر مركزيًا حسب الـIA.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-file-contract"></i>
+                            </div>
+                            <h5 class="card-title">سياسات وfooters</h5>
+                            <p class="card-text">روابط السياسات تكون في footer حسب الـsitemap.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-bars"></i>
+                            </div>
+                            <h5 class="card-title">menus adaptive</h5>
+                            <p class="card-text">القوائم تتغير لو المستخدم داخل sub-section معين.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="section-padding">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">عشر أسئلة اختيار من متعدد</h2>
+            <p class="text-center mb-5" data-aos="fade-up">اختبر معرفتك</p>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="quiz-container" data-aos="fade-up">
+                        <div id="quiz-content">
+                            <!-- Quiz content will be dynamically generated -->
+                        </div>
+                        
+                        <div class="quiz-navigation">
+                            <button id="prev-btn" class="btn btn-outline-primary" disabled>
+                                <i class="fas fa-arrow-right me-2"></i> السابق
+                            </button>
+                            <span id="question-counter">1 / 10</span>
+                            <button id="next-btn" class="btn btn-primary">
+                                التالي <i class="fas fa-arrow-left ms-2"></i>
+                            </button>
+                        </div>
+                        
+                        <div id="quiz-result" class="quiz-result">
+                            <div class="result-score" id="score-display">0/10</div>
+                            <h3>نتيجة الاختبار</h3>
+                            <p id="result-message"></p>
+                            <button id="restart-quiz" class="btn btn-primary mt-3">
+                                إعادة الاختبار <i class="fas fa-redo ms-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Topics Section -->
+    <section class="section-padding bg-light-section">
+        <div class="container">
+            <h2 class="section-title text-center" data-aos="fade-up">عناوين رئيسية للبحث أكثر</h2>
+            <p class="text-center mb-5" data-aos="fade-up">مواضيع للغوص الأعمق</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-sort"></i>
+                            </div>
+                            <h5 class="card-title">Card sorting techniques</h5>
+                            <p class="card-text">open vs closed</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-tree"></i>
+                            </div>
+                            <h5 class="card-title">Tree testing methodology</h5>
+                            <p class="card-text">and metrics</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <h5 class="card-title">Content modelling</h5>
+                            <p class="card-text">for headless CMS</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-sitemap"></i>
+                            </div>
+                            <h5 class="card-title">Information architecture patterns</h5>
+                            <p class="card-text">hub & spoke, hierarchical, faceted</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-universal-access"></i>
+                            </div>
+                            <h5 class="card-title">Accessibility considerations</h5>
+                            <p class="card-text">in IA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h5 class="card-title">SEO technical sitemaps</h5>
+                            <p class="card-text">and schema</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="700">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h5 class="card-title">Using analytics</h5>
+                            <p class="card-text">to validate IA</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="800">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-cubes"></i>
+                            </div>
+                            <h5 class="card-title">Design systems</h5>
+                            <p class="card-text">and content atoms</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="900">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-user-friends"></i>
+                            </div>
+                            <h5 class="card-title">Personas & journey mapping</h5>
+                            <p class="card-text">best practices</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="1000">
+                    <div class="card">
+                        <div class="card-body text-center">
+                            <div class="feature-icon mx-auto">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h5 class="card-title">Prioritization frameworks</h5>
+                            <p class="card-text">RICE, MoSCoW, Kano</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-title">Ahmed Tawheed</h3>
+                    <p>موقع تفاعلي متخصص في تصميم واجهات المستخدم وتجربة المستخدم (UI/UX) لتقديم محتوى تعليمي احترافي.</p>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">روابط سريعة</h5>
+                    <a href="#intro" class="footer-link">مقدمة</a>
+                    <a href="#needs" class="footer-link">تعريف الاحتياجات</a>
+                    <a href="#strategy" class="footer-link">الاستراتيجية</a>
+                    <a href="#content" class="footer-link">المحتوى</a>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">أقسام الموقع</h5>
+                    <a href="#scope" class="footer-link">النطاق</a>
+                    <a href="#sitemaps" class="footer-link">خرائط الموقع</a>
+                    <a href="#examples" class="footer-link">أمثلة</a>
+                    <a href="#quiz" class="footer-link">الاختبار</a>
+                </div>
+                
+                <!-- <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">تابعنا</h5>
+                    <p>اشترك في نشرتنا البريدية للحصول على أحدث المقالات والمصادر في مجال تصميم UI/UX.</p>
+                    <div class="input-group mt-3">
+                        <input type="email" class="form-control" placeholder="بريدك الإلكتروني">
+                        <button class="btn btn-light" type="button">اشترك</button>
+                    </div>
+                </div>
+            </div> -->
+            
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.2);">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2025 Ahmed Tawheed. جميع الحقوق محفوظة.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="../lec_4/w1.html" class="next-site-btn">
+                        الانتقال للموقع التالي <i class="fas fa-arrow-left ms-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+        
+        // Quiz data
+        const quizData = [
+            {
+                question: "إيه اللي نعنيه بـfractionality في محتوى المواقع؟",
+                options: [
+                    "تجزئة المحتوى لقطع صغيرة قابلة لإعادة الاستخدام.",
+                    "حذف المحتوى القديم.",
+                    "دمج الصفحات لصفحة واحدة.",
+                    "تصميم صفحات بدقة 1px."
+                ],
+                correctAnswer: 0,
+                explanation: "fractionality تعني تجزئة المحتوى إلى قطع صغيرة قابلة لإعادة الاستخدام."
+            },
+            {
+                question: "مين أفضل وقت لعمل card sorting؟",
+                options: [
+                    "بعد ما تطلع الـUI النهائي.",
+                    "في مرحلة البحث وفهم الـIA.",
+                    "لما تطلب ميزانية زيادة.",
+                    "بدل اختبار الـusability."
+                ],
+                correctAnswer: 1,
+                explanation: "card sorting يتم في مرحلة البحث وفهم الـIA لتحسين تنظيم المحتوى."
+            },
+            {
+                question: "أي أداة مش خاصة باختبار الشجرة؟",
+                options: [
+                    "Treejack.",
+                    "Optimal Workshop.",
+                    "Google Analytics.",
+                    "UsabilityHub."
+                ],
+                correctAnswer: 2,
+                explanation: "Google Analytics ليست أداة tree testing لكنها تقدم insights عن سلوك المستخدمين."
+            },
+            {
+                question: "عند إعداد strategy، إيه اللي لازم تحدده الأول؟",
+                options: [
+                    "الألوان.",
+                    "الهدف (business/user goals).",
+                    "عدد الـicons.",
+                    "طول الـcontent."
+                ],
+                correctAnswer: 1,
+                explanation: "الهدف (business/user goals) هو أول ما يجب تحديده عند إعداد الاستراتيجية."
+            },
+            {
+                question: "لو success rate في اختبار الشجرة أقل من 50% معناه؟",
+                options: [
+                    "الاختبار ناجح.",
+                    "في مشكلة في تسمية/ترتيب الشجرة.",
+                    "المستخدمين كسالى.",
+                    "لازم نزود الصور."
+                ],
+                correctAnswer: 1,
+                explanation: "إذا كانت نسبة النجاح أقل من 50% فهذا يشير إلى وجود مشكلة في تسمية أو ترتيب الشجرة."
+            },
+            {
+                question: "إيه الفايدة الرئيسية من عمل personas؟",
+                options: [
+                    "تحديد ألوان الموقع.",
+                    "فهم احتياجات وسلوك المستخدمين.",
+                    "التسويق فقط.",
+                    "تقليل المحتوى."
+                ],
+                correctAnswer: 1,
+                explanation: "الفايدة الرئيسية من personas هي فهم احتياجات وسلوك المستخدمين."
+            },
+            {
+                question: "أي من دول يعتبر جزء من content model؟",
+                options: [
+                    "Title, body, image.",
+                    "Browser name.",
+                    "Server IP.",
+                    "Bandwidth limit."
+                ],
+                correctAnswer: 0,
+                explanation: "Title, body, image تعتبر جزءاً أساسياً من content model."
+            },
+            {
+                question: "لو عندك منصة SaaS مع ميزات كتير، أفضل طريقة لتحديد النطاق هي؟",
+                options: [
+                    "نعمل MVP يركز على القيمة الأساسية.",
+                    "نعمل كل الميزات مرة واحدة.",
+                    "نأجل strategy.",
+                    "نغير personas."
+                ],
+                correctAnswer: 0,
+                explanation: "أفضل طريقة لتحديد النطاق لمنصة SaaS مع ميزات كثيرة هي عمل MVP يركز على القيمة الأساسية."
+            },
+            {
+                question: "في أداة Treejack، مقياس 'directness' يعبّر عن؟",
+                options: [
+                    "مدى سرعة التحميل.",
+                    "لو المستخدم وصل مباشرة للمكان المطلوب دون لفّ.",
+                    "عدد النقرات في الfooter.",
+                    "جودة الصور."
+                ],
+                correctAnswer: 1,
+                explanation: "مقياس 'directness' في Treejack يعبر عن ما إذا كان المستخدم وصل مباشرة للمكان المطلوب دون لفّ."
+            },
+            {
+                question: "ايه الفرق الأساسي بين XML sitemap وvisual sitemap؟",
+                options: [
+                    "مفيش فرق.",
+                    "XML للسيو ومحركات البحث، وvisual للـIA والتخطيط.",
+                    "XML أحسن في التصميم.",
+                    "Visual مخصص للهواتف بس."
+                ],
+                correctAnswer: 1,
+                explanation: "الفرق الأساسي هو أن XML sitemap للسيو ومحركات البحث، بينما visual sitemap للـIA والتخطيط."
+            }
+        ];
+        
+        // Quiz variables
+        let currentQuestion = 0;
+        let score = 0;
+        let userAnswers = [];
+        
+        // DOM elements
+        const quizContent = document.getElementById('quiz-content');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const questionCounter = document.getElementById('question-counter');
+        const quizResult = document.getElementById('quiz-result');
+        const scoreDisplay = document.getElementById('score-display');
+        const resultMessage = document.getElementById('result-message');
+        const restartQuizBtn = document.getElementById('restart-quiz');
+        
+        // Initialize quiz
+        function initQuiz() {
+            currentQuestion = 0;
+            score = 0;
+            userAnswers = [];
+            quizResult.style.display = 'none';
+            quizContent.style.display = 'block';
+            showQuestion();
+            updateButtons();
+        }
+        
+        // Show current question
+        function showQuestion() {
+            const question = quizData[currentQuestion];
+            let optionsHTML = '';
+            
+            question.options.forEach((option, index) => {
+                optionsHTML += `
+                    <div class="quiz-option" data-index="${index}">
+                        ${String.fromCharCode(65 + index)}) ${option}
+                    </div>
+                `;
+            });
+            
+            quizContent.innerHTML = `
+                <div class="quiz-question">${currentQuestion + 1}. ${question.question}</div>
+                <div class="quiz-options">
+                    ${optionsHTML}
+                </div>
+            `;
+            
+            // Add click event to options
+            document.querySelectorAll('.quiz-option').forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove selected class from all options
+                    document.querySelectorAll('.quiz-option').forEach(opt => {
+                        opt.classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked option
+                    this.classList.add('selected');
+                    
+                    // Store user answer
+                    userAnswers[currentQuestion] = parseInt(this.dataset.index);
+                });
+            });
+            
+            // Restore previous answer if exists
+            if (userAnswers[currentQuestion] !== undefined) {
+                document.querySelectorAll('.quiz-option')[userAnswers[currentQuestion]].classList.add('selected');
+            }
+            
+            // Update question counter
+            questionCounter.textContent = `${currentQuestion + 1} / ${quizData.length}`;
+        }
+        
+        // Update navigation buttons
+        function updateButtons() {
+            prevBtn.disabled = currentQuestion === 0;
+            
+            if (currentQuestion === quizData.length - 1) {
+                nextBtn.innerHTML = 'إنهاء الاختبار <i class="fas fa-check ms-2"></i>';
+            } else {
+                nextBtn.innerHTML = 'التالي <i class="fas fa-arrow-left ms-2"></i>';
+            }
+        }
+        
+        // Show quiz results
+        function showResults() {
+            quizContent.style.display = 'none';
+            quizResult.style.display = 'block';
+            
+            // Calculate score
+            score = 0;
+            userAnswers.forEach((answer, index) => {
+                if (answer === quizData[index].correctAnswer) {
+                    score++;
+                }
+            });
+            
+            // Display score
+            scoreDisplay.textContent = `${score} / ${quizData.length}`;
+            
+            // Display message based on score
+            let message = '';
+            if (score >= 8) {
+                message = 'ممتاز! لديك معرفة ممتازة بمجال تعريف الاحتياجات وخرائط الموقع.';
+            } else if (score >= 6) {
+                message = 'جيد جداً! لديك معرفة جيدة ولكن يمكنك تحسينها في بعض المجالات.';
+            } else if (score >= 4) {
+                message = 'متوسط. تحتاج إلى المزيد من التعلم وال practice في مجال تعريف الاحتياجات وخرائط الموقع.';
+            } else {
+                message = 'مبتدئ. نوصي بدراسة المواد المقدمة في الموقع بشكل أعمق.';
+            }
+            
+            resultMessage.textContent = message;
+        }
+        
+        // Event listeners
+        prevBtn.addEventListener('click', function() {
+            if (currentQuestion > 0) {
+                currentQuestion--;
+                showQuestion();
+                updateButtons();
+            }
+        });
+        
+        nextBtn.addEventListener('click', function() {
+            if (currentQuestion < quizData.length - 1) {
+                currentQuestion++;
+                showQuestion();
+                updateButtons();
+            } else {
+                showResults();
+            }
+        });
+        
+        restartQuizBtn.addEventListener('click', initQuiz);
+        
+        // Initialize quiz on page load
+        initQuiz();
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 70,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
